@@ -33,3 +33,37 @@ for (let i = 0; i < paragraphs.length; i++) {
 
 // Question 6
 
+const resultsContainer = document.querySelector(".results");
+
+resultsContainer.innerHTML = "<p>" + "New paragraphs" + "<p>";
+resultsContainer.style.background = "yellow";
+
+// Question 7
+
+const cats = [
+    {
+        name: "Blob",
+        age: 10
+    },
+    {
+        name: "Harold",
+    },
+    {
+        name: "Blurt",
+        age: 21
+    }
+];
+
+function listArgument (list) {
+    for (let i = 0; 1 < list.length; i++) {
+        console.log(list[i]);
+    }
+}
+
+listArgument (cats);
+
+
+// Question 8
+
+
+
