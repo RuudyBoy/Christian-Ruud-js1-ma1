@@ -57,7 +57,7 @@ const cats = [
 function listArgument (list) {
     for (let i = 0; 1 < list.length; i++) {
         console.log(list[i]);
-    }
+    } 
 }
 
 listArgument (cats);
@@ -66,4 +66,33 @@ listArgument (cats);
 // Question 8
 
 
+function createCats (cats) {
+
+   let html = "";
+
+   for(let i = 0; i < cats.length; i++) {
+
+    let catClaw = "unknown";
+
+    if(cats[i].claws) {
+        catClaw = cats[i].claws;
+        console.log("age unknown");
+    }
+
+    html += `<div class = "cat-container">
+        <h5> ${cats[i].name} </h5>
+        <p> Released: ${releaseYear} </p>
+    </div>`;
+
+    
+   }
+   
+   return html;
+
+}
+
+const newHTML = createCats(cat);
+
+const catContainer = document.querySelector(".cat-container");
+gameContainer.innerHTML = newHTML;
 
