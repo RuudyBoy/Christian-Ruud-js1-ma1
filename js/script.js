@@ -40,27 +40,27 @@ resultsContainer.style.background = "yellow";
 
 // Question 7
 
-const cats = [
-    {
-        name: "Blob",
-        age: 10
-    },
-    {
-        name: "Harold",
-    },
-    {
-        name: "Blurt",
-        age: 21
-    }
-];
+ const cats = [
+        {
+            name: "Blob",
+            age: 10
+        },
+        {
+            name: "Harold",
+        },
+        {
+            name: "Blurt",
+            age: 21
+        }
+    ];
 
-function listArgument (list) {
-    for (let i = 0; 1 < list.length; i++) {
+function listArgument(list) {
+    for(let i = 0; i < list.length; i++) {
         console.log(list[i]);
     } 
 }
 
-listArgument (cats);
+listArgument(cats);
 
 
 // Question 8
@@ -68,31 +68,37 @@ listArgument (cats);
 
 function createCats (cats) {
 
-   let html = "";
-
-   for(let i = 0; i < cats.length; i++) {
-
-    let catClaw = "unknown";
-
-    if(cats[i].claws) {
-        catClaw = cats[i].claws;
-        console.log("age unknown");
+    let html = "";
+ 
+    for(let i = 0; i < cats.length; i++) {
+ 
+     let catClaw = "unknown";
+ 
+     if(cats[i].claws) {
+         catClaw = cats[i].claws;
+         console.log("age unknown");
+     }
+ 
+     html +=`<div class = "cat-container">
+         <h5> ${cats[i].name} </h5>
+         <p> Released: ${releaseYear} </p>
+     </div>`;
+ 
+     
     }
-
-    html += `<div class = "cat-container">
-        <h5> ${cats[i].name} </h5>
-        <p> Released: ${releaseYear} </p>
-    </div>`;
-
     
-   }
-   
-   return html;
+    return html;
+ 
+ }
+ 
+ const newHTML = createCats(cat);
+ 
+ const catContainer = document.querySelector(".cat-container");
+ catContainer.innerHTML = newHTML;
+ 
 
-}
 
-const newHTML = createCats(cat);
 
-const catContainer = document.querySelector(".cat-container");
-gameContainer.innerHTML = newHTML;
 
+
+ 
